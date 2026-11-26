@@ -4,6 +4,8 @@
   "description": "Foundry VTT ===========",
   "main": "index.js",
   "scripts": {
+    "build": "rollup -c",
+    "rollup": "rollup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/astralfrontier/foundry-vtt/issues"
   },
-  "homepage": "https://github.com/astralfrontier/foundry-vtt#readme"
+  "homepage": "https://github.com/astralfrontier/foundry-vtt#readme",
+  "devDependencies": {
+    "rollup": "^4.68.8"
+  }
 }
