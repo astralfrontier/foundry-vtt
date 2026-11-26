@@ -23,7 +23,11 @@ forEveryPc(actor => {
 const affTable = tableHtml(columnHeaders, rows);
 
 const fd = await foundry.applications.api.DialogV2.input({
-  window: { title: "Tactics" },
+  window: { title: "Tactics", resizable: true },
+  position: {
+    width: 860,
+    height: 480
+  },
   content: affTable,
   ok: {
     label: "Close"
