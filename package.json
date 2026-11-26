@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "gulp-cli": "^3.1.0"
+  },
+  "name": "foundry-vtt",
+  "version": "1.0.0",
+  "description": "Foundry VTT ===========",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^5.0.1"
+  },
+  "scripts": {
+    "gulp": "gulp $@",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astralfrontier/foundry-vtt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/astralfrontier/foundry-vtt/issues"
+  },
+  "homepage": "https://github.com/astralfrontier/foundry-vtt#readme"
+}
