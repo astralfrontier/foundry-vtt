@@ -57,7 +57,9 @@ forEveryPc(actor => {
     });
     rsRows.push([
       {label: actor.name},
+      {label: `${hp.value} / ${hp.max}`},
       ...hpRow,
+      {label: `${mp.value} / ${mp.max}`},
       ...mpRow
     ])
 });
@@ -66,7 +68,7 @@ forEveryPc(actor => {
 const affHeaders = [{label: "PC"}, ...AFFINITY_NAMES.map(name => ({label: name}))];
 const affTable = tableHtml(affHeaders, affRows);
 
-const rsHeaders = ["PC", "30HP", "40", "50", "30MP", "40", "50"].map(header => ({label: header}));
+const rsHeaders = ["PC", "HP", "30", "40", "50", "MP", "30", "40", "50"].map(header => ({label: header}));
 const rsTable = tableHtml(rsHeaders, rsRows);
 
 const fd = await foundry.applications.api.DialogV2.input({
