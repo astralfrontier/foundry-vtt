@@ -1,4 +1,4 @@
-export const AFFINITY_NAMES = ["air", "bolt", "dark", "earth", "fire", "ice", "light", "physical", "poison"];
+export const AFFINITY_NAMES = ["physical", "air", "bolt", "dark", "earth", "fire", "ice", "light", "poison"];
 export const AFFINITY_LEVELS = ["VU", "-", "RS", "IM", "AB"];
 
 // "affinities" is actor.system.affinities
@@ -11,7 +11,7 @@ export function affinityLevels(actor) {
     const affinities = actor.system.affinities;
     return AFFINITY_NAMES.reduce(
         (affinityReport, affinityName) => {
-            affinityReport[affinityName] = affinityLevel(affinities, affinityName);
+            affinityReport[affinityName] = affinities[affinityName].current;
             return affinityReport;
         },
         {}

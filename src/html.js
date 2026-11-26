@@ -1,5 +1,5 @@
-export const td = (cell) => `<td>${cell}</td>`;
-export const th = (cell) => `<th>${cell}</th>`;
+export const td = (cell) => `<td style="${cell.style || ""}">${cell.label}</td>`;
+export const th = (cell) => `<th style="${cell.style || ""}">${cell.label}</th>`;
 export const tr = (cells) => `<tr>${cells.join('')}</tr>`;
 
 export function tableHtml(headers, rows) {
