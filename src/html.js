@@ -1,14 +1,9 @@
+export const td = (cell) => `<td>${cell}</td>`;
+export const th = (cell) => `<th>${cell}</th>`;
+export const tr = (cells) => `<tr>${cells.join('')}</tr>`;
+
 export function tableHtml(headers, rows) {
-    return `
-        <table>
-            <thead>
-                <tr>
-                    ${headers.map(header => `<th>${header}</th>`).join('\n')}
-                </tr>
-            </thead>
-            <tbody>
-                ${rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('\n')}</tr>`).join('\n')}
-            </tbody>
-        </table>
-    `
+    const thead = tr(headers.map(th))
+    const tbody = rows.map(row => tr(row.map(td))).join('');
+    return `<table><thead>${thead}</thead><tbody>${tbody}</tbody></table>`;
 }
